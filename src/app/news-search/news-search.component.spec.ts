@@ -1,21 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NewsSearchComponent } from './news-search.component';
-import {CommonModule} from "@angular/common";
-import {MatInputModule} from "@angular/material/input";
-import {NewsSearchRoutingModule} from "./news-search-routing.module";
-import {MatGridListModule} from "@angular/material/grid-list";
-import {MatIconModule} from "@angular/material/icon";
-import {ReactiveFormsModule} from "@angular/forms";
-import {MatCardModule} from "@angular/material/card";
-import {MatListModule} from "@angular/material/list";
-import {MatButtonModule} from "@angular/material/button";
-import {BrowserDynamicTestingModule} from "@angular/platform-browser-dynamic/testing";
-import {NewsService} from "../shared/services/http/news/news.service";
-import {HttpClientTestingModule} from "@angular/common/http/testing";
-import {DebugElement} from "@angular/core";
-import {By} from "@angular/platform-browser";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {CommonModule} from '@angular/common';
+import {MatInputModule} from '@angular/material/input';
+import {NewsSearchRoutingModule} from './news-search-routing.module';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatIconModule} from '@angular/material/icon';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
+import {BrowserDynamicTestingModule} from '@angular/platform-browser-dynamic/testing';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {DebugElement} from '@angular/core';
+import {By} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('NewsSearchComponent', () => {
   let component: NewsSearchComponent;
@@ -78,5 +77,5 @@ describe('NewsSearchComponent', () => {
     fixture.detectChanges();
     expect(nextButton.attributes.disabled).toBeFalsy();
     expect(previousButton.attributes.disabled).toBeFalsy();
-  })
+  });
 });

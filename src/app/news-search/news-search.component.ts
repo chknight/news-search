@@ -1,9 +1,9 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {NewsService} from "../shared/services/http/news/news.service";
-import {FormControl} from "@angular/forms";
-import {Observable, Subject, Subscription} from "rxjs";
-import {Article} from "../model/article";
-import {catchError, debounceTime, filter, map, tap} from "rxjs/operators";
+import {NewsService} from '../shared/services/http/news/news.service';
+import {FormControl} from '@angular/forms';
+import {Observable, Subject, Subscription} from 'rxjs';
+import {Article} from '../model/article';
+import {catchError, debounceTime, filter, map, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-news-search',
