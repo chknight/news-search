@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {NewsSearchComponent} from "./news-search.component";
+import {NewsSearchComponent} from './news-search.component';
 
 
 const routes: Routes = [

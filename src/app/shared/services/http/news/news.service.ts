@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Article} from "../../../../model/article";
-import {Observable} from "rxjs";
+import {HttpClient} from '@angular/common/http';
+import {Article} from '../../../../model/article';
+import {Observable} from 'rxjs';
 
 export interface NewsSearchResponse {
   hits: Article[],

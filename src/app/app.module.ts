@@ -4,9 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NewsSearchComponent } from './news-search/news-search.component';
-import {NewsSearchModule} from "./news-search/news-search.module";
-import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
+import {NewsSearchModule} from './news-search/news-search.module';
+import {HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
