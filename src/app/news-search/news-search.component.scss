@@ -1,0 +1,13 @@
+.article-area {
+  overflow-y: auto;
+  display: flex;
+  .article-card {
+    width: 500px;
+    margin-top: 20px;
+
+    .article-card-footer {
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}

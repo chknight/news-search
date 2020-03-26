@@ -1,0 +1,51 @@
+
+<mat-grid-list cols="3" rowHeight="100px">
+  <mat-grid-tile
+    [colspan]="3"
+    [rowspan]="1">
+    <mat-form-field class="example-full-width">
+      <mat-icon matPrefix (click)="fetchSearchResult()">search</mat-icon>
+      <input matInput
+             placeholder="Search"
+             [type]="'search'"
+             [formControl]="searchFormControl"
+             (input)="onSearchInputChange($event)">
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="1" [rowspan]="6"></mat-grid-tile>
+  <mat-grid-tile
+    class="article-area"
+    [colspan]="1"
+    [rowspan]="6">
+    <div fxLayout="row" fxLayoutGap="10">
+      <mat-card class="article-card" *ngFor="let article of (articles$ | async)">
+        <mat-card-title>{{article.title}}</mat-card-title>
+        <mat-card-subtitle>{{article.author}}</mat-card-subtitle>
+        <mat-card-content>{{article.story_text}}</mat-card-content>
+        <mat-card-footer class="article-card-footer">
+          <a [href]="article.url" target="_blank">Link
+          </a>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1"
+                 [rowspan]="6">
+
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="3"
+                 [rowspan]="1">
+    <button mat-button
+            class="previous-button"
+            (click)="onPreviousClicked()"
+            [disabled]="currentPageNum === 0 || loading">Previous</button>
+    <span *ngIf="totalPageNum !== 0">{{ currentPageNum + 1 }} / {{ totalPageNum}}</span>
+    <button mat-button
+            class="next-button"
+            [disabled]="currentPageNum === totalPageNum || loading"
+            (click)="onNextClicked()">Next</button>
+  </mat-grid-tile>
+
+</mat-grid-list>
